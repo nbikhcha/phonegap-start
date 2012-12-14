@@ -1,6 +1,19 @@
 <html>
     <head>
         <title>Meta Refresh Example</title>
-        <meta http-equiv="refresh" content="0;url=https://192.168.0.112:3000/" />
+        <!--<meta http-equiv="refresh" content="0;url=https://192.168.0.112:3000/" />-->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     </head>
+    <body>
+        <input type="text" id="ip" />
+        <button id="button">enter</button>
+        <script type="text/javascript">
+            window.onload = function(){
+                $("#button").on('touchstart', function(){window.location = $("#ip").val();});
+                $("#button").on('click', function(){
+                    window.location = $("#ip").val();
+                });
+            }
+        </script>
+    </body>
 </html>
